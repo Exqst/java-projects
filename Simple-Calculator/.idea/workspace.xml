@@ -7,9 +7,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c0d83879-1000-4fcf-80ff-4ad9bf960903" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/lib.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Simple-Calculator.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Simple-Calculator.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Simple-Calculator/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Simple-Calculator/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,7 +42,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "last_opened_file_path": "E:/Projects/java-projects/Simple-Calculator/javafx-sdk-18.0.1/bin/api-ms-win-core-timezone-l1-1-0.dll",
+    "last_opened_file_path": "E:/Projects/java-projects/Scientifi-Calculator",
     "project.structure.last.edited": "Artifacts",
     "project.structure.proportion": "0.0",
     "project.structure.side.proportion": "0.2"
