@@ -10,9 +10,9 @@ import javafx.stage.StageStyle;
 
 public class MainWindow extends Application {
     @Override
-    public void start(Stage stage) throws Exception {
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("MainWindowUI.fxml"));
-        Scene scene = new Scene(loader.load());
+    public void start(Stage stage) throws Exception {//Starts the program or the form
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("MainWindowUI.fxml"));//Loads the FXML file
+        Scene scene = new Scene(loader.load());//Loads the Scene
         scene.setFill(Color.TRANSPARENT);
         stage.setScene(scene);
         stage.initStyle(StageStyle.TRANSPARENT);
