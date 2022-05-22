@@ -13,7 +13,7 @@ public class InsertionSort {
             arr[j+1] = arr[j]; //Moving selection by 1 of the correct index is not yet found
             j--;
         }
-        arr[j+1] = last; //Places the last element to its correct index 
+        arr[j+1] = last; //Places the last element to its correct index
     }
     void display(int arr[]){
         for (int i = 0; i <arr.length; i++){
