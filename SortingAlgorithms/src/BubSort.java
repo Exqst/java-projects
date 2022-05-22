@@ -33,7 +33,7 @@ public class BubSort {
         try {
         size = in.nextInt();
         int arr[] = new int[size];
-        if (size == 1 || size == 0){
+        if (size == 1 || size == 0){//Checker if the array is less than 1
             System.out.print("Please input a larger number than 0 or 1. Thanks, terminating program.");
             System.exit(0);
         }
