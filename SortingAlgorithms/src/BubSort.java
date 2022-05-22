@@ -1,3 +1,6 @@
+import java.util.InputMismatchException;
+import java.util.Scanner;
+
 public class BubSort {
     void BubbleSort(int arr[], int n){
         if (n == 1){            //Check if the n is equal to the last element and no more passes can be done
@@ -22,9 +25,33 @@ public class BubSort {
     }
 
     public static void main (String[] args){
+        Scanner in = new Scanner(System.in);
         BubSort obj = new BubSort();
-        int arr[] = {15, 21, 23, 17, 1, 82, 12, 19};
-        obj.BubbleSort(arr, arr.length);
-        obj.display(arr);
+        int size;
+
+        System.out.print("Welcome to the program please enter the size of the array: ");
+        try {
+        size = in.nextInt();
+        int arr[] = new int[size];
+        if (size == 1 || size == 0){
+            System.out.print("Please input a larger number than 0 or 1. Thanks, terminating program.");
+            System.exit(0);
+        }
+        for (int i = 0; i < size; i++){
+            System.out.print("Please enter the numbers: ");
+            try {
+                arr[i] = in.nextInt();
+            }catch (InputMismatchException e){
+                System.out.println("Please enter a number next time. Terminating program");
+                System.exit(0);
+            }
+        }
+            obj.BubbleSort(arr, arr.length);
+            obj.display(arr);
+        }
+        catch (InputMismatchException e){
+            System.out.println("Please enter a number next time. Terminating program");
+            System.exit(0);
+        }
     }
 }
