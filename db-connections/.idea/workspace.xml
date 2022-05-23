@@ -47,7 +47,14 @@
     &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
   }
 }</component>
-  <component name="RunManager" selected="Application.LoginForm">
+  <component name="RunManager" selected="Application.DashBoard">
+    <configuration name="DashBoard" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="DashBoard" />
+      <module name="db-connections" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="LoginForm" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="LoginForm" />
       <module name="db-connections" />
@@ -71,6 +78,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.DashBoard" />
         <item itemvalue="Application.LoginForm" />
         <item itemvalue="Application.RegisterForm" />
         <item itemvalue="Application.main" />
