@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="5f01b8d2-6796-48a4-9bec-91347048150c" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db-connections.iml" beforeDir="false" afterPath="$PROJECT_DIR$/db-connections.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,6 +39,7 @@
     "Repository.Attach.Sources": "false",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.WIDTH": "218",
     "last_opened_file_path": "E:/Projects/java-projects/db-connections/lib/UCanAccess-5.0.1.bin/lib/commons-logging-1.2.jar",
     "project.structure.last.edited": "Libraries",
     "project.structure.proportion": "0.0",
@@ -46,7 +47,14 @@
     "settings.editor.selected.configurable": "preferences.pluginManager"
   }
 }]]></component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.RegisterForm">
+    <configuration name="RegisterForm" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="RegisterForm" />
+      <module name="db-connections" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="main" />
       <module name="db-connections" />
@@ -56,6 +64,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.RegisterForm" />
         <item itemvalue="Application.main" />
       </list>
     </recent_temporary>
