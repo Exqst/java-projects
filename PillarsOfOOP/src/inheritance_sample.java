@@ -1,12 +1,10 @@
 import java.util.InputMismatchException;
 import java.util.Scanner;
-
 public class inheritance_sample {
     static class Menu{
         String list[] = {"Clubhouse", "Steak", "Smoothie", "Hotdog"};
         int price[] = {25, 149, 50, 30};
     }
-
      static class Resto extends Menu{
         public static void main(String[] args){
         String name;
@@ -19,13 +17,11 @@ public class inheritance_sample {
         Scanner name_input = new Scanner(System.in);
         Scanner in = new Scanner(System.in);
         Scanner chc_in = new Scanner(System.in);
-
             Resto r = new Resto();
             //Name input
             System.out.print("Welcome to the restaurant please state your name: ");
             name = name_input.nextLine();
             System.out.print("Hello there " + name + "! ");
-
             //Display of the menu
             System.out.print("Here is the menu as well as the prices");
             System.out.println();
@@ -36,7 +32,6 @@ public class inheritance_sample {
             System.out.print("What would you like to order? Please select the corresponding number: ");
             try{
                 choice = in.nextInt();
-
             if (choice == 1) {
                 menuItem = r.list[0];
                 price = r.price[0];
@@ -62,6 +57,5 @@ public class inheritance_sample {
         }while (chc.equalsIgnoreCase("y"));
             System.out.print("Here is the total of your order: " + total);
         }
-
     }
 }
