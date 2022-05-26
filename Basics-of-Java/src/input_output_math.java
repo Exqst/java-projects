@@ -4,7 +4,7 @@ import java.util.Scanner;
 public class input_output_math {
     public static void main(String[] args){
         Scanner in = new Scanner(System.in);
-        Scanner chc = new Scanner(System.in);//New scanner for choice since it intakes the last value of "in"
+        Scanner chc = new Scanner(System.in);//New scanner for choice since it intakes the last value of "in" idk why
         String name;
         int num1 = 0, num2 = 0, result = 0;
         String choice;

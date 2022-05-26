@@ -7,7 +7,7 @@ public class leapYear {
         Scanner in = new Scanner(System.in);
 
         System.out.println("Welcome to the program !");
-        System.out.println("Can I please know your name: ");
+        System.out.print("Can I please know your name: ");
         name = in.nextLine();
         System.out.println("Welcome " + name + " Please enter a year, I will determine if its a leap year or not: ");
         year = in.nextInt();
