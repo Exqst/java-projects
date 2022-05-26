@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c9a026ec-ac9b-4625-90f4-85319a1625d5" name="Changes" comment="" />
+    <list default="true" id="c9a026ec-ac9b-4625-90f4-85319a1625d5" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/Basics-of-Java/src/input_output_math.java" beforeDir="false" afterPath="$PROJECT_DIR$/Basics-of-Java/src/input_output_math.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Basics-of-Java/src/leapYear.java" beforeDir="false" afterPath="$PROJECT_DIR$/Basics-of-Java/src/leapYear.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Scientifi-Calculator/src/Scientific_Calculator/MainApp.form" beforeDir="false" afterPath="$PROJECT_DIR$/Scientifi-Calculator/src/Scientific_Calculator/MainApp.form" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -19,7 +23,7 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "last_opened_file_path": "E:/Projects/java-projects"
+    "last_opened_file_path": "E:/Projects/java-projects/Basics-of-Java"
   }
 }]]></component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
