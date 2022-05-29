@@ -28,6 +28,14 @@ public class infix {
             }
         }
     }
+
+    public void preFixTraversal(Node mainNode){
+        if (mainNode!=null){
+            System.out.print(mainNode);
+            inFixTraversal(mainNode.LeftChild);
+            inFixTraversal(mainNode.RightChild);
+        }
+    }
     public void inFixTraversal(Node mainNode){
         if (mainNode!=null){
             inFixTraversal(mainNode.LeftChild);
@@ -35,6 +43,14 @@ public class infix {
             inFixTraversal(mainNode.RightChild);
         }
     }
+    public void postFixTraversal(Node mainNode){
+        if (mainNode!=null){
+            inFixTraversal(mainNode.LeftChild);
+            inFixTraversal(mainNode.RightChild);
+            System.out.print(mainNode);
+        }
+    }
+
     public static void main(String[] args) {
         infix tree = new infix();
         tree.addNode(50, " Office Worker ");
@@ -45,7 +61,14 @@ public class infix {
         tree.addNode(40, " Staff ");
         tree.addNode(60, " Manager ");
 
+        System.out.println("preFix Traversal");
+        tree.preFixTraversal(tree.root);
+        System.out.println("");
+        System.out.println("inFix Traversal");
         tree.inFixTraversal(tree.root);
+        System.out.println("");
+        System.out.println("postFix Traversal");
+        tree.postFixTraversal(tree.root);
     }
 }
 class Node{

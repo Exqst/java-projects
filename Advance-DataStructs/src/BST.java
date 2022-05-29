@@ -1,24 +1,16 @@
-import java.util.Scanner;
-
 class NodeBST {
     int key;
-    NodeBST left;
-    NodeBST right;
-
+    NodeBST left, right;
     public NodeBST(int data){
         key = data;
         left = right = null;
     }
 }
-
 public class BST {
-
     NodeBST root;
-
     BST(){
         root = null;
     }
-
     void postOrder(NodeBST node){
         if (node == null){
             return;
@@ -43,7 +35,6 @@ public class BST {
         preOrder(node.left);
         preOrder(node.right);
     }
-
     void postOrder_Traversal(){
         postOrder(root);
     }
