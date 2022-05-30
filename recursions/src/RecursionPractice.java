@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 public class RecursionPractice {
     void NumPrint(int num){
         if (num != 0){
@@ -78,6 +80,21 @@ public class RecursionPractice {
             }
         }
     }
+    void ReverseString(char[] str, int index){
+        if(str == null || index >= str.length){
+            return;
+        }
+        ReverseString(str, index + 1);
+        System.out.print(str[index]);
+
+    }
+    String StringReversal(String str){
+        if(str.isEmpty()){
+            return str;
+        }
+        return StringReversal(str.substring(1)) + str.charAt(0);
+    }
+
 
     public static void main(String[] args) {
         RecursionPractice RP = new RecursionPractice();
@@ -86,6 +103,9 @@ public class RecursionPractice {
         int fibonacci = 10;
         int SummationOfNumber = 123;
         int FiveCounter = 13555235;
+        char [] string = {'O','r','a','c','l','e'};
+        String str = "Recursion";
+        String reversed = RP.StringReversal(str);
         //1st problem
         RP.NumPrint(num);
         //2nd Problem
@@ -102,5 +122,8 @@ public class RecursionPractice {
         System.out.println("Sum of number: " + RP.sum(SummationOfNumber));
         //8th Problem
         System.out.println("The number of five for " + FiveCounter + " is: " + RP.fiveCounter(FiveCounter));
+        //Custom Problems
+        System.out.print("The reverse string is: ");RP.ReverseString(string, 0);System.out.println("");
+        System.out.println("The reverse string of " + str + " is: " + reversed);
     }
 }
