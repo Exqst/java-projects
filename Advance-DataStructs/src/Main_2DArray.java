@@ -1,6 +1,6 @@
 import java.util.Scanner;
 public class Main_2DArray {
-    public static int HrGlassSum(int arr[][]){
+    public static int HrGlassSum(int arr[][]){//if List<List<Integer>> is used, use .get(index) instead of [index]
         int MaxValue = Integer.MIN_VALUE;
         int total = 0;
         for (int i = 0; i<4;i++){
