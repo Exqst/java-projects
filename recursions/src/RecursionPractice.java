@@ -4,8 +4,7 @@ public class RecursionPractice {
     void NumPrint(int num){
         if (num != 0){
             System.out.println(num);
-            num--;
-            NumPrint(num);
+            NumPrint(num-1);
         }
     }
     int CatEyes(int cats){
