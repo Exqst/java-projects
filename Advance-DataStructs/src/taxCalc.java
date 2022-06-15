@@ -1,21 +1,20 @@
 public class taxCalc {
 public static double taxCalculator(double income, double[][] taxBrackets){
-    double result = 0;
+    double result;
     double temp;
     double tempIncome;
     //for 0 to 10k
     if(income > taxBrackets[0][0] && income <= taxBrackets[1][0]){
         result = income * taxBrackets[0][1];
         return result;
-
     }
     //For 10k to 20k
     else if (income > taxBrackets[1][0] && income <= taxBrackets[2][0]) {
         tempIncome = income - taxBrackets[1][0];
         temp = tempIncome * taxBrackets[1][1];
-        if(income > taxBrackets[0][0] && income <= taxBrackets[1][0]){
-            result = income * taxBrackets[0][1];
-            result += temp;
+        if(tempIncome > taxBrackets[0][0] && tempIncome <= taxBrackets[1][0]){
+            result = tempIncome * taxBrackets[0][1];
+            result = temp + result;
             return result;
         }
     }
@@ -23,24 +22,37 @@ public static double taxCalculator(double income, double[][] taxBrackets){
     else if (income > taxBrackets[2][0] && income <= taxBrackets[3][0]){
         tempIncome = income - taxBrackets[2][0];
         temp = tempIncome * taxBrackets[2][1];
-        if (income > taxBrackets[2][0] && income > taxBrackets[3][0]){
-            tempIncome = income - taxBrackets[2][0];
-            temp = temp + tempIncome * taxBrackets[2][1];
-            if (income > taxBrackets[1][0] && income <= taxBrackets[2][0]) {
-                tempIncome = income - taxBrackets[1][0];
-                temp = temp + tempIncome * taxBrackets[1][1];
-                if(income > taxBrackets[0][0] && income <= taxBrackets[1][0]){
-                    result = income * taxBrackets[0][1];
-                    result += temp;
+        return taxCalculator(tempIncome, taxBrackets);
+        //if still within 20 to 50
+        /*if(tempIncome > taxBrackets[2][0] && tempIncome <= taxBrackets[3][0]){
+            tempIncome = tempIncome - taxBrackets[2][0];
+            temp = (tempIncome * taxBrackets[2][1]) + temp;
+            if(tempIncome > taxBrackets[1][0] && tempIncome <= taxBrackets[2][0]){//if 10 to 20
+                tempIncome = tempIncome - taxBrackets[1][0];
+                temp = (tempIncome * taxBrackets[1][1]) + temp;
+                if(tempIncome > taxBrackets[0][0] && tempIncome <= taxBrackets[1][0]){//if 0 to 10
+                    result = tempIncome * taxBrackets[0][1];
+                    result = temp + result;
                     return result;
                 }
             }
         }
+        else if(tempIncome > taxBrackets[1][0] && tempIncome <= taxBrackets[2][0]){//if 10 to 20
+            tempIncome = tempIncome - taxBrackets[1][0];
+            temp = (tempIncome * taxBrackets[1][1]) + temp;
+            if(tempIncome > taxBrackets[0][0] && tempIncome <= taxBrackets[1][0]){//if 0 to 10
+                result = tempIncome * taxBrackets[0][1];
+                result = temp + result;
+                return result;
+            }
+        }
+        else if(tempIncome > taxBrackets[0][0] && tempIncome <= taxBrackets[1][0]){
+            result = tempIncome * taxBrackets[0][1];
+            return result;
+        }
     }*/
-    else{
-        return 0.0;
-    }
-    return taxCalculator(result, taxBrackets);
+    return 0.0;
+    //return taxCalculator(result, taxBrackets);
 
 }
 
