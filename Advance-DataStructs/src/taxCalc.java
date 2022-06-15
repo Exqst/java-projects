@@ -1,58 +1,39 @@
 public class taxCalc {
-public static double taxCalculator(double income, double[][] taxBrackets){
+public static double taxCalculator(double income, double[][] taxBrackets,double storage){
     double result;
     double temp;
     double tempIncome;
     //for 0 to 10k
     if(income > taxBrackets[0][0] && income <= taxBrackets[1][0]){
         result = income * taxBrackets[0][1];
+        if (storage > 0){
+            result = storage + result;
+            return result;
+        }
         return result;
     }
     //For 10k to 20k
     else if (income > taxBrackets[1][0] && income <= taxBrackets[2][0]) {
         tempIncome = income - taxBrackets[1][0];
-        temp = tempIncome * taxBrackets[1][1];
-        if(tempIncome > taxBrackets[0][0] && tempIncome <= taxBrackets[1][0]){
-            result = tempIncome * taxBrackets[0][1];
-            result = temp + result;
-            return result;
-        }
+        temp = taxBrackets[1][0] * taxBrackets[1][1];
+        temp = temp + storage;
+        return taxCalculator(tempIncome, taxBrackets, temp);
     }
-    /*//For 20k to 50k
+    //For 20k to 50k
     else if (income > taxBrackets[2][0] && income <= taxBrackets[3][0]){
         tempIncome = income - taxBrackets[2][0];
-        temp = tempIncome * taxBrackets[2][1];
-        return taxCalculator(tempIncome, taxBrackets);
-        //if still within 20 to 50
-        /*if(tempIncome > taxBrackets[2][0] && tempIncome <= taxBrackets[3][0]){
-            tempIncome = tempIncome - taxBrackets[2][0];
-            temp = (tempIncome * taxBrackets[2][1]) + temp;
-            if(tempIncome > taxBrackets[1][0] && tempIncome <= taxBrackets[2][0]){//if 10 to 20
-                tempIncome = tempIncome - taxBrackets[1][0];
-                temp = (tempIncome * taxBrackets[1][1]) + temp;
-                if(tempIncome > taxBrackets[0][0] && tempIncome <= taxBrackets[1][0]){//if 0 to 10
-                    result = tempIncome * taxBrackets[0][1];
-                    result = temp + result;
-                    return result;
-                }
-            }
-        }
-        else if(tempIncome > taxBrackets[1][0] && tempIncome <= taxBrackets[2][0]){//if 10 to 20
-            tempIncome = tempIncome - taxBrackets[1][0];
-            temp = (tempIncome * taxBrackets[1][1]) + temp;
-            if(tempIncome > taxBrackets[0][0] && tempIncome <= taxBrackets[1][0]){//if 0 to 10
-                result = tempIncome * taxBrackets[0][1];
-                result = temp + result;
-                return result;
-            }
-        }
-        else if(tempIncome > taxBrackets[0][0] && tempIncome <= taxBrackets[1][0]){
-            result = tempIncome * taxBrackets[0][1];
-            return result;
-        }
-    }*/
+        temp = taxBrackets[2][0] * taxBrackets[2][1];
+        temp = temp + storage;
+        return taxCalculator(tempIncome, taxBrackets, temp);
+    }
+    //For > 50k
+    else if (income > taxBrackets[3][0]){
+        tempIncome = income - taxBrackets[3][0];
+        temp = taxBrackets[3][0] * taxBrackets[3][1];
+        temp = temp + storage;
+        return taxCalculator(tempIncome, taxBrackets, temp);
+    }
     return 0.0;
-    //return taxCalculator(result, taxBrackets);
 
 }
 
@@ -67,33 +48,36 @@ public static double taxCalculator(double income, double[][] taxBrackets){
         brackets[3][0] = 50000;
         brackets[3][1] = .35;
 
-        if(taxCalculator(5000,brackets) == 500){
+        if(taxCalculator(5000,brackets, 0) == 500){
             System.out.println("Correct");
         }
         else{
-            System.out.println("Incorrect the result is " + taxCalculator(5000,brackets));
+            System.out.println("Incorrect the result is " + taxCalculator(5000,brackets, 0));
         }
-        if (taxCalculator(10000,brackets) == 1000){
+        if (taxCalculator(10000,brackets, 0) == 1000){
             System.out.println("Correct");
         }
         else{
-            System.out.println("Incorrect the result is " + taxCalculator(10000,brackets));
+            System.out.println("Incorrect the result is " + taxCalculator(10000,brackets, 0));
         }
-        if (taxCalculator(20000,brackets) == 2500){
+        if (taxCalculator(20000,brackets, 0) == 2500){
             System.out.println("Correct");
         }
         else{
-            System.out.println("Incorrect the result is " + taxCalculator(20000,brackets));
+            System.out.println("Incorrect the result is " + taxCalculator(20000,brackets, 0));
         }
-        if (taxCalculator(50000,brackets) == 13000){
+        if (taxCalculator(50000,brackets, 0) == 11000){
             System.out.println("Correct");
         }
         else{
-            System.out.println("Incorrect the result is " + taxCalculator(50000,brackets));
+            System.out.println("Incorrect the result is " + taxCalculator(50000,brackets, 0));
         }
-        /*
-        System.out.println();
-        System.out.println(taxCalculator(55555,brackets));*/
+        if(taxCalculator(55000,brackets,0) == 18000){
+            System.out.println("Correct");
+        }
+        else{
+            System.out.println("Incorrect the result is " + taxCalculator(55000,brackets,0));
+        }
 
     }
 
